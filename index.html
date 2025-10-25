@@ -1,1 +1,104 @@
-Pagina web de Ruben Martinez
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hojas de Otoño en Kioto</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Yu Mincho', serif;
+            background-color: #f7f3e9;
+            color: #2c1810;
+        }
+
+        .book-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .book-cover, .book-back {
+            width: 400px;
+            height: 600px;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+
+        .book-cover {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?auto=format&fit=crop&w=500');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .book-back {
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .author {
+            font-style: italic;
+            margin-top: 1rem;
+        }
+
+        .synopsis {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .japanese-pattern {
+            border-top: 2px solid #aa3f2c;
+            margin: 1rem 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .price {
+            text-align: right;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="book-container">
+        <div class="book-cover">
+            <div>
+                <h1>Hojas de Otoño en Kioto</h1>
+                <p class="author">Por Sakura Tanaka</p>
+            </div>
+            <div class="japanese-pattern"></div>
+        </div>
+
+        <div class="book-back">
+            <div class="synopsis">
+                <p>En las serenas calles de Kioto, donde los momiji pintan el paisaje de rojo y dorado, Mei Nakamura, una restauradora de antiguas casas tradicionales, encuentra un diario oculto entre las vigas de una vieja machiya.</p>
+                
+                <p>El diario pertenece a Kenji Yamamoto, un poeta que vivió en la casa durante los años 60. A medida que Mei se sumerge en sus palabras, descubre una historia de amor que transcurrió durante un otoño similar, cincuenta años atrás.</p>
+                
+                <p>Mientras restaura la casa y desvela los secretos del diario, Mei se encuentra con Akira, un profesor de literatura que resulta ser el nieto de Kenji. Juntos, emprenderán un viaje a través del tiempo para descubrir una historia de amor que nunca fue contada, mientras su propia historia comienza a escribirse entre los antiguos pasillos de madera y el suave susurro de las hojas otoñales.</p>
+            </div>
+            
+            <div>
+                <div class="japanese-pattern"></div>
+                <p class="price">ISBN: 978-4-XXXX-XXXX-X<br>¥2,800</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
