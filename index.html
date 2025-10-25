@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hojas de Otoño en Kioto</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+        
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Yu Mincho', serif;
-            background-color: #f7f3e9;
-            color: #2c1810;
+            font-family: 'Quicksand', sans-serif;
+            background-color: #fef6ff;
+            color: #6d4c77;
         }
 
         .book-container {
@@ -26,52 +28,112 @@
             width: 400px;
             height: 600px;
             padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(109, 76, 119, 0.2);
+            position: relative;
+            overflow: hidden;
         }
 
         .book-cover {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?auto=format&fit=crop&w=500');
-            background-size: cover;
-            background-position: center;
-            color: #fff;
+            background: linear-gradient(135deg, #ffcad4, #ffd1e8);
+            color: #6d4c77;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            border: 10px solid white;
+        }
+
+        .book-cover::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                rgba(255, 255, 255, 0.2) 25%,
+                transparent 25%,
+                transparent 50%,
+                rgba(255, 255, 255, 0.2) 50%,
+                rgba(255, 255, 255, 0.2) 75%,
+                transparent 75%
+            );
+            transform: rotate(30deg);
+            z-index: 0;
+            background-size: 100px 100px;
+            animation: shimmer 15s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                transform: rotate(30deg) translate(-50%, -50%);
+            }
+            100% {
+                transform: rotate(390deg) translate(-50%, -50%);
+            }
+        }
+
+        .book-cover > div {
+            position: relative;
+            z-index: 1;
         }
 
         .book-back {
-            background-color: #fff;
+            background-color: white;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            border: 2px solid #ffd1e8;
         }
 
         .author {
-            font-style: italic;
+            font-style: normal;
             margin-top: 1rem;
+            color: #ff8fb1;
+            font-weight: bold;
+            font-size: 1.2rem;
         }
 
         .synopsis {
-            font-size: 0.9rem;
-            line-height: 1.6;
+            font-size: 1rem;
+            line-height: 1.8;
             text-align: justify;
         }
 
         .japanese-pattern {
-            border-top: 2px solid #aa3f2c;
+            border-top: 3px solid #ffd1e8;
             margin: 1rem 0;
+            position: relative;
+        }
+
+        .japanese-pattern::after {
+            content: '❀';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #ff8fb1;
+            background: white;
+            padding: 0 10px;
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin: 0;
             line-height: 1.2;
+            font-weight: 700;
+            background: linear-gradient(45deg, #6d4c77, #ff8fb1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(109, 76, 119, 0.1);
         }
 
         .price {
             text-align: right;
             font-weight: bold;
+            color: #ff8fb1;
         }
     </style>
 </head>
